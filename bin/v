@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+source $HOME/.venv/bin/activate
+
+export PYTHON_HOST_PROG="/usr/local/bin/python2"
+export PYTHON3_HOST_PROG="$HOME/.venv/bin/python"
+export FZF_DEFAULT_COMMAND='rg --files'
+
+nvim -X "$@"
+
+# alias v=$(pwd)/bin/v
