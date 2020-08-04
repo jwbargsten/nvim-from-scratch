@@ -137,17 +137,22 @@ nmap ss <Plug>ReplaceWithRegisterLine
 xmap s  <Plug>ReplaceWithRegisterVisual
 nnoremap s <Nop>
 
-set undodir=$HOME/.cache/nvim/undofiles
-set undofile
+let &backupdir = $HOME."/.cache/nvim/backupfiles"
 
-if !isdirectory(fnamemodify($HOME."/.cache/nvim/backupfiles", ":p"))
-  call mkdir(fnamemodify($HOME."/.cache/nvim/backupfiles", ":p"), "p")
+if !isdirectory(fnamemodify(&backupdir, ":p"))
+  call mkdir(fnamemodify(&backupdir, ":p"), "p")
 endif
 
 autocmd BufWritePre * let &backupext = substitute(expand('%:p:h'), '/', '%', 'g')
 
 set backup
 
+let &undodir = $HOME. "/.cache/nvim/undofiles"
+if !isdirectory(fnamemodify(&undodir, ":p"))
+  call mkdir(fnamemodify(&undodir, ":p"), "p")
+endif
+
+set undofile
 
 nnoremap vx :GundoToggle<CR>
 nnoremap <silent> gb <C-^>
@@ -169,7 +174,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:ackprg = 'rg --vimgrep --smart-case'
 let g:ack_use_cword_for_empty_search = 1
 
-command Ak ":Ack!"
 command -nargs=* Ak :call ack#Ack('grep!', <q-args>)
 
 
