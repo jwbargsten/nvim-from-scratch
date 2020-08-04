@@ -110,6 +110,7 @@ Plug 'samoshkin/vim-mergetool'
 
 Plugins
 ```
+Plug 'SirVer/ultisnips'
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2-bufword'
@@ -117,7 +118,6 @@ Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
 Plug 'ncm2/ncm2-jedi'
 Plug 'ncm2/ncm2-ultisnips'
-Plug 'SirVer/ultisnips'
 Plug 'ncm2/ncm2-cssomni'
 Plug 'yuki-ycino/ncm2-dictionary'
 Plug 'fgrsnau/ncm2-otherbuf'
@@ -162,7 +162,7 @@ command -nargs=* Ak :call ack#Ack('grep!', <q-args>)
 
 ## Outlook
 
-* <https://github.com/neoclide/coc.nvim>
+[GitHub - neoclide/coc.nvim:](https://github.com/neoclide/coc.nvim)
 
 ## Resources
 
