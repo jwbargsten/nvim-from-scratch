@@ -23,6 +23,7 @@ Make your life easier: `ESC` -> `CAPSLOCK` 😁
 * <https://github.com/junegunn/vim-plug>
 * <https://github.com/junegunn/fzf.vim>
 * <https://github.com/tpope/vim-fugitive>
+* `tpope/vim-sensible`
 
 ## Step 3: basic mappings
 
@@ -116,6 +117,7 @@ Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
 Plug 'ncm2/ncm2-jedi'
 Plug 'ncm2/ncm2-ultisnips'
+Plug 'SirVer/ultisnips'
 Plug 'ncm2/ncm2-cssomni'
 Plug 'yuki-ycino/ncm2-dictionary'
 Plug 'fgrsnau/ncm2-otherbuf'
@@ -165,3 +167,4 @@ command -nargs=* Ak :call ack#Ack('grep!', <q-args>)
 ## Resources
 
 * [basic neovim plugins](https://donniewest.com/a-guide-to-basic-neovim-plugins/)
+* [vim awesome](https://vimawesome.com/)
